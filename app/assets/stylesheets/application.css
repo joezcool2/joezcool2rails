@@ -108,38 +108,3 @@ table tr.evenrow {
 
 
 
-
-
-
-
-
-
-
-@media only screen and (max-width: 800px) {
-
-
-}
-
- @media screen and (orientation:portrait) {
-
-  }
-
-
- @media screen and (orientation:landscape) {
-
-  }
-
-  @media screen and (max-width:767px) {
-
-  ..This is basic media query for respective device.In to this media query  CSS code cover the both view landscape and portrait view.
-
-  }
-
-
-  @media screen and (min-width:320px) and (max-width:767px) and (orientation:landscape) {
-
-
-  ..This orientation media query
-
-  }
-
