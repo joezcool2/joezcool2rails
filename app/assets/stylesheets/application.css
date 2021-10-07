@@ -1,0 +1,145 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+table tr.oddrow {
+    background-color: #111111;
+}
+
+table tr.evenrow {
+    background-color: #333D46;
+}
+
+.container1 {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.active {
+    border: solid 1px;
+    border-color: blue;
+    border-radius: 10px;
+}
+
+
+    .new {
+      width: 310px;
+      height: 70px;
+      margin: 10px;
+      border: 2px;
+      border-radius: 10px;
+      border-style: solid;
+      text-align: center;
+    }
+
+    .new2 {
+      width: 310px;
+      height: 70px;
+      margin: 10px;
+      border: 2px;
+      border-radius: 10px;
+      border-style: solid;
+      text-align: center;
+    }
+
+.toast {
+    margin-top: 4px;
+}
+
+.tb1 {
+    color: yellow;
+}
+
+.table-nonfluid {
+   width: auto !important;
+}
+
+.jb1 {
+  margin-top: 30px;
+  background-color: darkgrey;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  padding: 20px;
+  color: #000;
+}
+
+.jb2 a {
+    text-decoration: none !important;
+}
+
+.jb2 a:visited {
+    color: white;
+}
+
+.jb2 a:hover {
+    color: #e1e3f2;
+}
+
+.breadcrumb {
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.em1 {
+    color: red;
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 800px) {
+
+
+}
+
+ @media screen and (orientation:portrait) {
+
+  }
+
+
+ @media screen and (orientation:landscape) {
+
+  }
+
+  @media screen and (max-width:767px) {
+
+  ..This is basic media query for respective device.In to this media query  CSS code cover the both view landscape and portrait view.
+
+  }
+
+
+  @media screen and (min-width:320px) and (max-width:767px) and (orientation:landscape) {
+
+
+  ..This orientation media query
+
+  }
+

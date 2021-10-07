@@ -1,0 +1,24 @@
+<div class="container col-md-5">
+ <h1>Listing Friends</h1>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Username</th>
+        <th scope="col">Sign In Count</th>
+        <th scope="col">Last Online</th>
+        <th scope="col">Avatar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each do |user| %>
+      <tr class="<%= cycle('oddrow', 'evenrow') -%>">
+        <td><%= user.name %></td>
+        <td><%= user.sign_in_count %></td>
+        <td><%= time_ago_in_words(user.last_sign_in_at) %> ago</td>
+        <td><%= image_tag user.avatar.url %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+  </div>
+

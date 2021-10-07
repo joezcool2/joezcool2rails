@@ -1,0 +1,13 @@
+<div class="container col-md-5">
+
+<h1>Editing Friend</h1>
+
+<%= render 'form', friend: @friend %>
+<br>
+
+<%= link_to 'Back', friends_path, class: "btn btn-sm btn-primary" %>
+&nbsp;
+<%= link_to 'Delete', @friend, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm btn-danger" %>
+
+</div>
+

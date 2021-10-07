@@ -1,0 +1,33 @@
+
+<div class="container card border-primary col-md-5 mt-4">
+  <div class="card-body">
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<div class="form-group container">
+               <label class="form-label card-title mt-3"><h2>Log in</h2></label>
+               <div class="form-floating mt-4">
+                 <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", id: "floatingInput" %>
+                 <label for="floatingInput">Email address</label>
+               </div>
+               <div class="form-floating mt-4">
+                 <%= f.password_field :password, autocomplete: "current-password", class: "form-control", id: "floatingPassword", placeholder: "Password"  %>
+                 <label for="floatingPassword">Password</label>
+                 <% if devise_mapping.rememberable? %>
+
+                   <div class="form-check">
+                     <%= f.check_box :remember_me, class: "form-check-input mt-2", type: "checkbox", value: "", id: "flexCheckDefault" %>
+                     <%= f.label :remember_me, class: "mt-2" %>
+                   </div>
+
+
+                 <% end %>
+                 <div class="actions mt-4">
+                   <%= f.submit "Log in" %>
+                 </div>
+                 <br>
+                 <div class="pull-right"><%= render "users/shared/links" %></div>
+               </div>
+             </div>
+
+           <% end %>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+
+
+<h1 class="text-center">Friends</h1>
+
+<% @friends.each do |friend| %>
+<% if friend.user == current_user %>
+<div class="container card border-secondary mb-3" style="max-width: 30rem;">
+  <div class="card-header">Friend</div>
+  <div class="card-body">
+    <h4 class="card-title jb2">
+      <%= link_to friend.first_name + ' ' + friend.last_name, friend %></h4>
+    <p class="card-text">
+      Email address: <%= friend.email %>
+      <br>
+      Username: <%= friend.user_name %>
+      <br>
+      UserID: <%= friend.user_id %>
+      <br>
+    </p>
+  </div>
+</div>
+  <% end %>
+<% end %>
+
+
+<br>
+
+<div class="container text-center">
+  <%= link_to 'Add New Friend', new_friend_path %>
+</div>
+
+

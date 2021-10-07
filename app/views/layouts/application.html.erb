@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JoezCool2 Web</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" integrity="sha384-tKLJeE1ALTUwtXlaGjJYM3sejfssWdAaWR2s97axw4xkiAdMzQjtOjgcyw0Y50KU" crossorigin="anonymous">
+  </head>
+
+  <body>
+
+    <%= render 'shared/navbar' %>
+
+    <% if alert.present? %>
+    <div class="toast show mb-3 col-lg-6 container" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto">Notice!</strong>
+        <button type="button" class="btn-close btn-danger ms-2 mb-1" data-bs-dismiss="toast" aria-label="Close">
+          <span aria-hidden="true"></span>
+        </button>
+      </div>
+        <div class="toast-body alert-warning new text-white border-danger mb-2">
+          <% flash.each do |type, msg| %>
+            <div>
+              <p class="alert p-2 mb-2"><%= alert %></p>
+            </div>
+        </div>
+       <% end %>
+     <% end %>
+    </div>
+
+   <% if notice.present? %>
+   <div class="toast show mb-3 col-lg-6 container" role="alert" aria-live="assertive" aria-atomic="true">
+     <div class="toast-header">
+       <strong class="me-auto">Notice!</strong>
+       <button type="button" class="btn-close btn-danger ms-2 mb-1" data-bs-dismiss="toast" aria-label="Close">
+         <span aria-hidden="true"></span>
+       </button>
+     </div>
+        <div class="toast-body alert-primary text-white new2 mb-2">
+          <% flash.each do |type, msg| %>
+            <div>
+              <p class="info p-2 mb-2"><%= msg %></p>
+            </div>
+        </div>
+      <% end %>
+    <% end %>
+    </div>
+
+    <%= yield %>
+
+
+<!--     <%= render 'shared/footer' %> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  </body>
+</html>

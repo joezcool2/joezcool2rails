@@ -1,0 +1,42 @@
+<div class="container form-group card border-primary col-md-5 mt-4 px-4">
+
+  <label class="form-label mt-4"><h2>Sign up</h2></label>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+
+  <%= render "users/shared/error_messages", resource: resource %>
+      <p>"May be publicly visible, do not use real email address!"</p>
+  <div class="form-floating mb-4">
+
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", id: "floatingInput" %>
+      <label for="floatingInput">Email address</label>
+  </div>
+
+
+<div class="form-floating mb-4">
+
+    <%= f.password_field :password, autocomplete: "new-password", class: "form-control", id: "floatingPassword", placeholder: "Password" %>
+    <label for="floatingPassword">Password</label>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+  </div>
+
+
+
+
+<div class="form-floating mb-3">
+
+    <%= f.password_field :password_confirmation, autocomplete: "password_confirmation", class: "form-control", id: "floatingPassword" %>
+    <label for="floatingPassword">Password Confirm</label>
+  </div>
+
+  <div class="actions">
+      <%= f.submit "Sign up", class: "mt-2" %>
+      <% end %>
+  </div>
+
+  <div class="mt-3 mb-3">
+   <%= render "users/shared/links" %>
+  </div>
+</div>

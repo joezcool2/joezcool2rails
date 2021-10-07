@@ -1,0 +1,22 @@
+<div class="container col-md-4">
+  <div class="jumbotron jb1">
+    <h1 class="display-4"><%= @friend.first_name %>&nbsp;<%= @friend.last_name %></h1>
+    <p class="lead">          <strong>Username:</strong>
+          <%= @friend.user_name %>
+          <br>
+          <strong>Email:</strong>
+          <%= @friend.email %></p>
+    <hr class="my-4">
+    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    </p>
+    </div>
+    <div class="breadcrumb">
+      <%= link_to 'Edit', edit_friend_path(@friend), class: "card-link" %>
+    </div>
+  </div>
+
+
+
+
